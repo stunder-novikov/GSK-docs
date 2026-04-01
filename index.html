@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Settings Kit - Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <style>
+    :root {
+      --theme-color: #4db8a4;
+      --base-background-color: #1a1a2e;
+      --sidebar-background: #16213e;
+      --sidebar-nav-link-color--active: #4db8a4;
+      --sidebar-name-color: #e0e0e0;
+      --base-font-size: 15px;
+      --heading-color: #e0e0e0;
+      --base-color: #c0c0c0;
+      --link-color: #4db8a4;
+      --link-color--hover: #6fd4c0;
+      --code-inline-background: #2a2a4a;
+      --code-inline-color: #e0e0e0;
+      --code-block-background: #0f0f23;
+      --table-cell-border-color: #2a2a4a;
+      --blockquote-border-color: #4db8a4;
+    }
+
+    .sidebar {
+      border-right: 1px solid #2a2a4a;
+    }
+
+    .markdown-section table {
+      display: table;
+      width: 100%;
+    }
+
+    .markdown-section table th {
+      background-color: #16213e;
+      color: #e0e0e0;
+      font-weight: 600;
+    }
+
+    .markdown-section table td {
+      border-color: #2a2a4a;
+    }
+
+    .markdown-section h1 {
+      border-bottom: 2px solid #4db8a4;
+      padding-bottom: 10px;
+    }
+
+    .markdown-section h2 {
+      color: #6fd4c0;
+      margin-top: 2em;
+    }
+
+    .app-name-link {
+      font-size: 1.2em;
+      font-weight: 700;
+      color: #4db8a4 !important;
+    }
+
+    .search input {
+      background-color: #16213e !important;
+      border-color: #2a2a4a !important;
+      color: #e0e0e0 !important;
+    }
+
+    .markdown-section code {
+      border-radius: 4px;
+    }
+
+    .markdown-section pre {
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Game Settings Kit',
+      nameLink: '/GSK-docs/',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      search: {
+        placeholder: 'Search docs...',
+        noData: 'No results',
+        depth: 3
+      },
+      auto2top: true,
+      maxLevel: 3
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+</body>
+</html>
