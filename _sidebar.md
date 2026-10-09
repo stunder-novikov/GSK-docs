@@ -17,3 +17,4 @@
 - [Examples](docs/examples.md)
 - [Example Content](docs/example-content.md)
 - [Requirements](docs/requirements.md)
+- [Changelog](docs/changelog.md)

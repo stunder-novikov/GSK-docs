@@ -25,7 +25,7 @@ Setting fields:
 
 ## 2. Connect Data Assets
 
-Project Settings -> Plugins -> Game Settings Kit -> Settings Data Assets -- add references to your Data Assets. For key bindings, do the same under Key Bindings Data Assets.
+Project Settings -> Plugins -> Game Settings Kit -> Settings Data Assets -- add references to your Data Assets. For key bindings, do the same under Key Bindings Data Assets. The example Data Assets are listed here by default; remove them if you don't need them and they will not come back.
 
 ## 3. Build UI
 
@@ -38,11 +38,11 @@ Create a Widget Blueprint parented to `GSKSettingsWidget`:
 
 For setting rows, create widgets parented to `GSKSettingRowWidget`:
 
-1. Call `Init Row(Definition)` when creating
+1. Call `Init Row(Definition)` when creating (safe to call again when your menu rebuilds its rows)
 2. Implement `On Row Initialized` -- set up the control (slider/checkbox/dropdown)
 3. Implement `On Value Changed` -- update control when value changes
 
-Or copy and modify the example widgets from `Example/Widgets/`.
+Or copy and modify the example widgets from `/GameSettingsKit/Example/Widgets/`.
 
 ## 4. Apply Game Settings
 
@@ -50,7 +50,7 @@ Subscribe to `OnSettingsApplied` to apply settings without built-in handlers (FO
 
 ## 5. Access the Manager
 
-The manager is a GameInstance Subsystem, accessible from anywhere:
+The manager is a GameInstance Subsystem, accessible from anywhere. It is not created on a dedicated server, so check it for null (Is Valid) in code that also runs there:
 
 **Blueprint:**
 ```

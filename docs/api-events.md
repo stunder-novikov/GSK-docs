@@ -41,13 +41,13 @@ void AMyGameMode::OnSettingsApplied()
 
 ## OnSettingsReverted
 
-Fires after `RevertSettings()`.
+Fires after `RevertSettings()` and after `RevertResolution()` (including when the confirmation countdown ends).
 
 **Blueprint:** `Bind Event to On Settings Reverted`
 
 ## OnAudioDevicesReady
 
-Fires when audio device list is loaded.
+Fires when the audio device list is first obtained and whenever it changes.
 
 **Blueprint:** `Bind Event to On Audio Devices Ready`
 

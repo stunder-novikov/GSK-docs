@@ -2,7 +2,7 @@
 
 ## SetSoundClassVolume (static)
 
-Set volume on a Sound Class directly without Sound Mix.
+Set volume on a Sound Class directly without Sound Mix. The change is made on the Sound Class asset; when the game ends (including leaving Play In Editor) each asset gets its own volume back, so call it again at startup, e.g. from OnSettingsApplied.
 
 **C++:**
 ```cpp
@@ -34,11 +34,11 @@ Manager->RequestAudioOutputDevices();
 
 **Blueprint:** `Request Audio Output Devices`
 
-Call when opening the Audio tab to detect connected/disconnected devices (hot-plug).
+Call when opening the Audio tab to detect connected/disconnected devices (hot-plug). When the AudioOutputDevice setting uses Dynamic Enum Options, the list is also requested automatically shortly after start.
 
 ## SetAudioOutputDevice
 
-Switch audio output device by DeviceId.
+Switch audio output device by DeviceId. Does nothing if that device is already in use or already requested; an empty id selects the system default.
 
 **C++:**
 ```cpp
